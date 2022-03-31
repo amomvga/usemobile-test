@@ -38,28 +38,19 @@ export function NavLink({
         <Flex w="100%" justify="end">
           <Flex align="center" mr={2}>
             <ChakraMenu>
-              {() => {
-                return (
-                  <>
-                    <MenuButton
-                      color="blue"
-                      as={Select}
-                      placeholder="Filtrar por"
-                      border="none"
-                    />
-
-                    <MenuList>
-                      <MenuItem onClick={desserts}>Sobremesas</MenuItem>
-                      <MenuItem onClick={drinks}>Bebidas</MenuItem>
-                      <MenuItem onClick={dishes}>Prato completo</MenuItem>
-                      <MenuItem onClick={garnishes}>Acompamhamentos</MenuItem>
-                      <MenuItem onClick={filterDisabled}>
-                        Remover filtro
-                      </MenuItem>
-                    </MenuList>
-                  </>
-                );
-              }}
+              <MenuButton
+                as={Select}
+                color="blue"
+                placeholder="Filtrar por"
+                border="none"
+              />
+              <MenuList>
+                <MenuItem onClick={desserts}>Sobremesas</MenuItem>
+                <MenuItem onClick={drinks}>Bebidas</MenuItem>
+                <MenuItem onClick={dishes}>Prato completo</MenuItem>
+                <MenuItem onClick={garnishes}>Acompamhamentos</MenuItem>
+                <MenuItem onClick={filterDisabled}>Remover filtro</MenuItem>
+              </MenuList>
             </ChakraMenu>
           </Flex>
         </Flex>

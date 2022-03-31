@@ -23,21 +23,17 @@ export function OrderBy({ ASC, DESC }: OrderByProps) {
     <Flex>
       {!isWideVersion ? (
         <ChakraMenu>
-          {() => (
-            <>
-              <MenuButton
-                as={Select}
-                placeholder="Ordenar por"
-                border="none"
-                color="blue"
-              />
+          <MenuButton
+            as={Select}
+            border="none"
+            placeholder="Ordenar por"
+            color="blue"
+          />
 
-              <MenuList>
-                <MenuItem onClick={ASC}>Menor preço</MenuItem>
-                <MenuItem onClick={DESC}>Maior preço</MenuItem>
-              </MenuList>
-            </>
-          )}
+          <MenuList>
+            <MenuItem onClick={ASC}>Menor preço</MenuItem>
+            <MenuItem onClick={DESC}>Maior preço</MenuItem>
+          </MenuList>
         </ChakraMenu>
       ) : (
         <ChakraMenu>
