@@ -1,14 +1,15 @@
 import {
   Flex,
   HStack,
+  Icon,
   Link,
   Menu as ChakraMenu,
   MenuButton,
   MenuItem,
   MenuList,
-  Select,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import { RiArrowDropDownFill } from "react-icons/ri";
 
 import { Itens } from "./Itens";
 
@@ -37,13 +38,9 @@ export function NavLink({
       {!isWideVersion ? (
         <Flex w="100%" justify="end">
           <Flex align="center" mr={2}>
-            <ChakraMenu>
-              <MenuButton
-                as={Select}
-                color="blue"
-                placeholder="Filtrar por"
-                border="none"
-              />
+            <ChakraMenu isLazy>
+              <MenuButton color="blue">Filtrar por</MenuButton>
+              <Icon color="blue" mt="2" as={RiArrowDropDownFill} />
               <MenuList>
                 <MenuItem onClick={desserts}>Sobremesas</MenuItem>
                 <MenuItem onClick={drinks}>Bebidas</MenuItem>

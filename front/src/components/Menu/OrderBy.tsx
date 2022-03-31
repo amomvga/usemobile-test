@@ -6,8 +6,9 @@ import {
   MenuItem,
   Button,
   useBreakpointValue,
-  Select,
+  Icon,
 } from "@chakra-ui/react";
+import { RiArrowDropDownFill } from "react-icons/ri";
 
 interface OrderByProps {
   ASC: any;
@@ -22,14 +23,9 @@ export function OrderBy({ ASC, DESC }: OrderByProps) {
   return (
     <Flex>
       {!isWideVersion ? (
-        <ChakraMenu>
-          <MenuButton
-            as={Select}
-            border="none"
-            placeholder="Ordenar por"
-            color="blue"
-          />
-
+        <ChakraMenu isLazy>
+          <MenuButton color="blue">Ordenar por</MenuButton>
+          <Icon color="blue" mt="2" as={RiArrowDropDownFill} />
           <MenuList>
             <MenuItem onClick={ASC}>Menor preço</MenuItem>
             <MenuItem onClick={DESC}>Maior preço</MenuItem>

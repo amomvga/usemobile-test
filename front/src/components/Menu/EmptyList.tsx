@@ -1,5 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Flex, Text, Image } from "@chakra-ui/react";
 
 export function EmptyList() {
   return (

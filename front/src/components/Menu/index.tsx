@@ -230,7 +230,7 @@ export function Menu() {
               color="gray.50"
               borderRadius={8}
               w={["160px", "250px"]}
-              height={['40px', "50px"]}
+              height={["40px", "50px"]}
               fontWeight="bold"
             >
               Cadastrar produtos
