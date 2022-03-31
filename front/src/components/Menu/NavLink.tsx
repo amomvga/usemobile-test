@@ -38,12 +38,11 @@ export function NavLink({
         <Flex w="100%" justify="end">
           <Flex align="center" mr={2}>
             <ChakraMenu>
-              {({ isOpen }) => {
+              {() => {
                 return (
                   <>
                     <MenuButton
                       color="blue"
-                      isActive={isOpen}
                       as={Select}
                       placeholder="Filtrar por"
                       border="none"

@@ -23,10 +23,9 @@ export function OrderBy({ ASC, DESC }: OrderByProps) {
     <Flex>
       {!isWideVersion ? (
         <ChakraMenu>
-          {({ isOpen }) => (
+          {() => (
             <>
               <MenuButton
-                isActive={isOpen}
                 as={Select}
                 placeholder="Ordenar por"
                 border="none"
@@ -42,12 +41,11 @@ export function OrderBy({ ASC, DESC }: OrderByProps) {
         </ChakraMenu>
       ) : (
         <ChakraMenu>
-          {({ isOpen }) => (
+          {() => (
             <>
               <MenuButton
                 w={["20", "30", "40"]}
                 fontSize={["11", "13", "15"]}
-                isActive={isOpen}
                 as={Button}
               >
                 Ordenar por
