@@ -210,13 +210,15 @@ export function Menu() {
 
       {listItens.length <= 2 ? <Flex minHeight={300}></Flex> : ""}
 
-      <Flex justify="center" mb="6">
-        <Pagination
-          totalCountOfRegisters={totalCountOfRegistersPage}
-          currentPage={page}
-          onPageChange={setPage}
-        />
-      </Flex>
+      {totalCountOfRegistersPage > 5 && (
+        <Flex justify="center" mb="6">
+          <Pagination
+            totalCountOfRegisters={totalCountOfRegistersPage}
+            currentPage={page}
+            onPageChange={setPage}
+          />
+        </Flex>
+      )}
 
       <Flex justify="center" mb="6">
         <Link href="/register">

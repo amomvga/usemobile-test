@@ -60,7 +60,7 @@ export default function Register() {
     formatData.append("portions", portions);
     formatData.append("disponibility", disponibility);
 
-    api.post("/itens", formatData).then((response) => console.log(response));
+    api.post("/itens", formatData);
   }
 
   function handleChangePath() {
